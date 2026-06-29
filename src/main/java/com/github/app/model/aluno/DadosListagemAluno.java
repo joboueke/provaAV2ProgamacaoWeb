@@ -11,8 +11,8 @@ public record DadosListagemAluno(
     public DadosListagemAluno(Aluno aluno) {
         this(
             aluno.getId(),
-            aluno.getEmail(), // ERRO 4: deveria ser aluno.getNome()
-            aluno.getNome(),  // ERRO 4: deveria ser aluno.getEmail()
+            aluno.getNome(), // ERRO: Está invertido, o nome e o email.
+            aluno.getEmail(), 
             aluno.getRa(),
             aluno.getCurso()
         );

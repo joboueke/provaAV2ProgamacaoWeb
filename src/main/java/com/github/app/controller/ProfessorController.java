@@ -22,7 +22,7 @@ public class ProfessorController {
     @Autowired
     private ProfessorRepository repository;
 
-    // ERRO 2: método de cadastro sem @Transactional — o dado não será persistido no banco
+    @Transactional //ERRO - Faltou o @Transactional
     @PostMapping
     public void cadastrar(@RequestBody DadosCadastroProfessor dados) {
         repository.save(new Professor(dados));

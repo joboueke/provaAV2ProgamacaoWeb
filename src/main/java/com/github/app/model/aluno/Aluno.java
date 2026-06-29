@@ -11,7 +11,7 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 @Entity
-@Table(name = "professores") // ERRO 3: deveria ser @Table(name = "alunos")
+@Table(name = "alunos") // ERRO -> Nome errado, correção: alunos
 public class Aluno {
 
     @Id

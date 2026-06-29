@@ -44,8 +44,8 @@ public class MatriculaController {
         return repository.findAll();
     }
 
-    // ERRO 7: @PathVariable com nome "ids" não corresponde ao parâmetro {id} da URL
-    @DeleteMapping("/{id}")
+    // ERRO: @PathVariable com nome "ids" não corresponde ao parâmetro {id} da URL
+    @PathVariable Integer id
     @Transactional
     public void excluir(@PathVariable Integer ids) {
         repository.deleteById(ids);
